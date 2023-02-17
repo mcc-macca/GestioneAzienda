@@ -16,6 +16,7 @@ Public Class accesso
     End Sub
 
     Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
+
         Dim strUsername As String = Username.Text
         ' define a variable to hold the password
         Dim strPassword As String = Password.Text
@@ -32,8 +33,10 @@ Public Class accesso
 
                 ' check if the first part (username) and the second part (password) match the entered values
                 If parts(0) = strUsername And parts(1) = strPassword Then
-                    ' login successful, show a message box
-                    MessageBox.Show("Login successful!")
+                    ' login andato bene, mostra il launcher e chiude la finestra
+                    Dim launcher As New Launcher
+                    launcher.Show()
+                    Me.Close()
                     Return
                 End If
             Loop

@@ -26,6 +26,7 @@ Partial Class accesso
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(accesso))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Password = New System.Windows.Forms.TextBox()
@@ -118,6 +119,7 @@ Partial Class accesso
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Courier New", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Label2.Location = New System.Drawing.Point(42, 27)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(402, 42)
@@ -165,6 +167,7 @@ Partial Class accesso
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "accesso"
         Me.Text = "Accesso al sistema di Gestione Aziende"
         Me.GroupBox1.ResumeLayout(False)
